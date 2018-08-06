@@ -1,0 +1,25 @@
+p {
+    font-family: 'IBM Plex Sans Condensed', sans-serif;
+}
+h1 {
+    text-align: center;
+    color: #18386d;
+}
+table, th, td {
+   border-bottom: 1px solid #ddd;
+   padding: 15px;
+}
+th {
+    font-size: 15
+}
+.footer {
+    font-size: 5;
+}
+a {
+    background-color: #18386d;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}

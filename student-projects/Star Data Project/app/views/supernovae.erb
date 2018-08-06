@@ -1,0 +1,31 @@
+<!DOCTYPE>
+<head>
+    <title>Supernovae</title>
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans+Condensed" rel="stylesheet">
+    <link rel = "stylesheet" href = "css/index.css">
+</head>
+<body>
+    <h1>Types of Supernovae</h1>
+    <ul>
+        <li>Ia: These supernovae are the product of white dwarves in binary star systems accumulating matter from their companion, leading it to become so dense that oxygen and carbon fuse together uncontrollably and the star explodes. </li>
+        <br></br>
+        <li>II: At the end of a star's life, it runs out of nuclear fuel. If the iron core of the star is dense enough, it collapses and becomes a supernova.</li>
+    </ul>
+    <table style="width:100%">
+  <tr>
+    <th>Name</th>
+    <th>Discovery Date</th> 
+    <th>Host Name</th>
+    <th>Type</th>
+  </tr>
+  <% for n in 0..10 %>
+  <tr>
+     <th><%=$sne_name[n]%></th>
+     <th><%=$sne_disc[n]%></th>
+     <th><%=$sne_host[n]%></th>
+     <th><%=$sne_type[n]%></th>
+  </tr>
+  <% end %>
+</table>
+</body>
+</html>

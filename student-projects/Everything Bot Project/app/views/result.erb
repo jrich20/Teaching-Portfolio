@@ -1,0 +1,88 @@
+
+  
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Everything Bot</title>
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+</head>
+<body class=teal>
+  <nav class="center waves-effect waves-light teal" role="navigation">
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="/" class="brand-logo center">Everything Bot</a>
+    </div>
+  </nav>
+  
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <h1 class="header center white-text">My answer is...</h1>
+      <div class="row center">
+        <% if @answer[0]=="TT"%>
+        <div class="container row">
+          <div class="card large col s6 offset-s3 center-align pink center lighten-3">
+    <div class="card-image waves-effect waves-block waves-light">
+      <img class="activator" src="images/JP.jpg">
+    </div>
+    <div class="card-content">
+      <span class="card-title activator white-text text-darken-4"><%=@answer[1]%><i class="material-icons right">more_vert</i></span>
+      <p class="white-text"><%=@answer[2]%></p>
+    </div>
+    <div class="card-reveal">
+      <span class="card-title center grey-text text-darken-4"><%=@answer[1]%><i class="material-icons right">close</i></span>
+      <p class=center><%=@answer[3]%>.</p>
+    </div>
+  </div>
+  </div>
+        <% else%>
+          <% @answer.each do |n| %>
+          <h5 class="header col s12 white-text"><%=n%></h5>
+          <%end%>
+        <%end%>
+        <form class="col s12 center" action="/result" method="post">
+          <div class="row">
+            <span class="input-field col s12">
+              <br><br>
+              <p class="header col s12 white-text center">Still curious? Ask another question!</p>
+              
+              <input  name="question" type="text" autocomplete="off" class="validate center white-text">
+              
+            </span>
+            <br><br>
+              <br><br>
+              <br>
+            <button class="btn waves-effect waves-light" type="submit" value="question">Enter
+                <i class="material-icons right">send</i>
+              </button>
+              <!--   Clickable card if answer[0]=="Trivia time!"-->
+             
+            
+          </div>
+        </form>
+      <br><br>
+    </div>
+  </div>
+  
+
+  
+  
+  <footer>
+    <div class="footer-copyright">
+      <div class="container white-text">
+      <p>Email chrisasma103@gmail.com to report any bugs.</p>
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+  </body>
+</html>
